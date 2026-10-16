@@ -1,0 +1,21 @@
+WATCHTOWER — START HERE (macOS)
+
+1. Unzip website-change-detector.zip.
+2. Open Terminal and cd into the website-change-detector folder.
+3. Run:
+
+   python3 -m venv .venv
+   source .venv/bin/activate
+   python -m pip install --upgrade pip
+   pip install -r requirements.txt
+   uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+
+4. Open http://127.0.0.1:8000
+5. Click “Try the live demo”.
+6. In another Terminal tab run:
+
+   curl -X POST http://127.0.0.1:8000/demo/change
+
+7. Click “Check now” on the demo website to see a real diff.
+
+Full instructions and limitations are in README.md.
